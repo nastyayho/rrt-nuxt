@@ -1,0 +1,126 @@
+//breakpoints
+@import "variables";
+// @use "variables";
+
+@mixin screenXS {
+	@media screen and (max-width: 575px) {
+		@content;
+	}
+}
+
+@mixin screenS {
+	@media screen and (max-width: 770px) {
+		@content;
+	}
+}
+
+@mixin screenXM {
+	@media screen and (max-width: 990px) {
+		@content;
+	}
+}
+
+@mixin screenM {
+	@media screen and (max-width: 1140px) {
+		@content;
+	}
+}
+
+@mixin screenL {
+	@media screen and (max-width: 1280px) {
+		@content;
+	}
+}
+
+@mixin screenXL {
+	@media screen and (max-width: 1440px) {
+		@content;
+	}
+}
+
+@mixin screenXXL {
+	@media screen and (max-width: 1600px) {
+		@content;
+	}
+}
+
+@mixin hovers {
+    @media screen and (min-width: 771px) {
+        &:hover {
+            @content;
+        }
+	}
+}
+
+// сделать блок на всю ширину экрана (вытащить из контейнера)
+@mixin all-width {
+    width: 100vw;
+    position: relative;
+    left: calc(-50vw + 50%);
+}
+
+// скрытый скролл
+@mixin hidden-scroll {
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+
+    &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+    }
+}
+
+// текст не выделяется при нажатии
+@mixin no-selection {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+// @mixin icomoon-before {
+//     font-family: 'icomoon' !important;
+//     speak: never;
+//     font-style: normal;
+//     font-weight: normal;
+//     font-variant: normal;
+//     text-transform: none;
+//     line-height: 1;
+//     -webkit-font-smoothing: antialiased;
+//     -moz-osx-font-smoothing: grayscale;
+// }
+
+@keyframes spin {
+	0% {
+	  transform: rotate(0deg);
+	}
+  
+	100% {
+	  transform: rotate(360deg);
+	}
+  }
+  
+  @keyframes fadeIn {
+	0% {
+	  opacity: 0;
+	}
+  
+	100% {
+	  opacity: 1;
+	}
+  }
+  
+  @keyframes opacityPreloader {
+	25% {
+	  opacity: 0;
+	}
+  
+	50% {
+	  opacity: 1;
+	}
+  
+	75% {
+	  opacity: 0;
+	}
+  }
+  

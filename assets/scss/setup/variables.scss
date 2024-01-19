@@ -1,0 +1,63 @@
+// Colors
+$color-black-true: #000;
+$color-white-true: #fff;
+$color-white-01: #f5f5f4;
+$color-white-02: #fcf8f8;
+$color-grey-01: #333;
+$color-green: #3a9c3e;
+$color-green-01: #aee2b1;
+$color-green-02: #2d7578;
+$color-green-03: #2e7d32;
+$color-green-04: #4dca2d;
+$color-green-05: #256428;
+$color-grey-02: #808080;
+$color-blue: #00a3ff;
+$color-blue-01: #07f;
+$color-blue-02: #acd7ff;
+$color-blue-03: #349eff;
+$color-grey-03: #dadada;
+$color-grey-04: #eee;
+$color-grey-05: #afafaf;
+$color-grey-06: #fafafa;
+$color-grey-07: #7a7670;
+$color-grey-08: #666;
+$color-grey-09: #525252;
+$color-orange-01: #fd9316;
+$color-orange-02: #f90;
+$color-orange-03: #ff5c00;
+$color-red-01: #ff3434;
+$color-toolbox-bcg: #2b77ad;
+$color-cyan: #19adb7;
+
+// для использования
+// UI Colors
+$c-main-text: $color-grey-01;
+
+// Анимации
+$transition-duration: 0.2s;
+$transition-easing: ease-out;
+$transition: all $transition-duration $transition-easing 0s;
+$transition-easing-alt: cubic-bezier(0.77, 0, 0.19, 1);
+
+// подключенные
+$Exo2-Light: 'Exo2-Light';
+$Exo2-Regular: 'Exo2-Regular';
+$Exo2-Medium: 'Exo2-Medium';
+$Exo2-SemiBold: 'Exo2-SemiBold';
+$Exo2-Bold: 'Exo2-Bold';
+
+// для использования:
+$ff-ligth: $Exo2-Light, arial, sans-serif;
+$ff-reg: $Exo2-Regular, arial, sans-serif;
+$ff-medium: $Exo2-Medium, arial, sans-serif;
+$ff-semibold: $Exo2-SemiBold, arial, sans-serif;
+$ff-bold: $Exo2-Bold, arial, sans-serif;
+
+// Breakpoints
+$screenXS: 575px;
+$screenS: 770px;
+$screenXM: 990px;
+$screenM: 1140px;
+$screenL: 1280px;
+$screenXL: 1440px;
+$screenXXL: 1600px;
