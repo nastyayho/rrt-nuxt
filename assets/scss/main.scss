@@ -6,13 +6,176 @@
 // @import 'setup/default';
 // @import 'setup/layouts';
 
-//test
-// @import 'test';
+// #app {
+//     max-width: 1280px;
+//     margin: 0 auto;
+//     padding: 2rem;
+//     font-weight: normal;
+// }
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, dl, dt, dd, ol, nav ul, nav li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
 
-#app {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 2rem;
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+strong {
+    font-family: $ff-bold;
+}
+
+ol, ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    // scroll-behavior: smooth;
+}
+
+input[type='submit'] {
+    -webkit-appearance: none;
+}
+
+img {
+    border: 0;
+    max-width: 100%;
+}
+
+ul {
+    margin: 0;
+
+    li {
+        list-style: none;
+       margin: 0;
+    }
+}
+
+input, textarea, select {
+    outline: none;
+}
+
+textarea {
+    resize: none;
+    overflow: hidden;
+}
+
+a {
+    color:  #000000;
+    -webkit-transition: all 0.2s ease 0s;
+    transition: all 0.2s ease 0s;
+    text-decoration: none;
+    cursor: pointer;
+
+    @include hovers {
+        text-decoration: none;
+        // color: $color-hover;
+
+        -webkit-transition: all 0.2s ease 0.05s;
+        transition: all 0.2s ease 0.05s;
+    }
+
+    &:active {
+        text-decoration: none;
+        // color: $color-second;
+
+        -webkit-transition: all 0.2s ease 0.05s;
+        transition: all 0.2s ease 0.05s;
+    }
+}
+
+a:active,
+a:focus,
+a:focus-within,
+a:target,
+a:visited,
+a:focus-visible {
+    outline: none;
+}
+
+hr {
+    margin: 0;
+    height: 0;
+}
+
+textarea, input[type="text"], input[type="button"], input[type="submit"] {
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+
+p {
+
+}
+
+button {
+    cursor: pointer;
+    
+    &:focus {
+        outline: 0;
+    }
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+sup {
+    font-size: 75%;
+    top: -0.5em;
+    position: relative;
+}
+
+body {
+    font-family: $ff-reg;
+    font-size: 16px;
+    line-height: 135%;
     font-weight: normal;
+    height: auto;
+    margin: 0 auto;
+    color: $c-main-text;
+    box-sizing: border-box;
+}
+
+.l-main {
+    position: relative;
+    min-width: 320px;
+    z-index: 0;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1320px;
+    
+    @include screenXS {
+        padding-right: 16px;
+        padding-left: 16px;
+    }
 }
 

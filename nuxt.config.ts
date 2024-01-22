@@ -1,5 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  css: ['~/assets/scss/main.scss'],
+
   vite: {
     css: {
       preprocessorOptions: {
@@ -7,24 +9,19 @@ export default defineNuxtConfig({
           additionalData: `
             @import "@/assets/scss/setup/fonts.scss";
             @import "@/assets/scss/setup/variables.scss";
-            @import "@/assets/scss/setup/typography.scss";
             @import "@/assets/scss/setup/mixins.scss";
-            @import "@/assets/scss/setup/default.scss";
-            @import "@/assets/scss/setup/layouts.scss";
           `
         }
       },
     }
   },
 
-  css: ['~/assets/scss/main.scss'],
-
   app: {
     head: {
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
       link: [
-        { rel: 'icon', href: '/favicon.ico', sizes: 'any' },
+        { rel: 'icon', href: '/img/favicon.ico', sizes: 'any' },
         { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
       ],
       meta: [
