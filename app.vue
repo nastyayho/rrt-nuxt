@@ -1,11 +1,17 @@
 <script setup>
-  import { onMounted } from 'vue';
-  // const { data, pending, error, refresh } = await useFetch('/api/modules', {
-  //   pick: ['title']
-  // })
+  import { onMounted, ref } from 'vue';
+  const items = ref([]);
   
-  onMounted(() => {
+  onMounted(async () => {
     // тут все то, что нужно для отображения при загрузке страницы
+    try {
+      const { data } = await useFetch('/api/modules');
+      items.value = data;
+    } catch (err) {
+      console.log(err);
+    }
+
+
   });
 </script>
 
