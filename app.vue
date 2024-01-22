@@ -1,27 +1,55 @@
 <script setup>
-
+  import { onMounted } from 'vue';
+  // const { data, pending, error, refresh } = await useFetch('/api/modules', {
+  //   pick: ['title']
+  // })
+  
+  onMounted(() => {
+    // тут все то, что нужно для отображения при загрузке страницы
+  });
 </script>
 
 <template>
     <h1>Привет</h1>
     <button>Открыть</button>
     <img src="/img/emoji-1.png" alt="Discover Nuxt 3" />
+    <ul>
+      {# <li 
+      v-for="item in items"
+      :key="item.id"
+      :title="item.title"
+      >dsaad</li> #}
+      <li>dasdada</li>
+      <li>dasdada</li>
+      <li>dasdada</li>
+      <li>dasdada</li>
+    </ul>
 </template>
 
 <style lang="scss" scoped>
 
   h1 {
-      font-size: 36px;
-      line-height: 36px;
-      color: $color-green;
-      font-family: $ff-reg;
-    }
+    font-size: 36px;
+    line-height: 36px;
+    color: $color-green;
+    font-family: $ff-reg;
+  }
 
-    button {
-      @include hovers {
-        background-color: $color-black-true;
-        color: $color-white-true;
-        transition: $transition;
-      }
+  button {
+    @include hovers {
+      background-color: $color-black-true;
+      color: $color-white-true;
+      transition: $transition;
     }
+  }
+
+  ul {
+    margin-top: 40px;
+    padding: 0 40px;
+
+    li {
+      margin-bottom: 6px;
+      list-style: disc;
+    }
+  }
 </style>
