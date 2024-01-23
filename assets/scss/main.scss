@@ -104,6 +104,10 @@ a {
         -webkit-transition: all 0.2s ease 0.05s;
         transition: all 0.2s ease 0.05s;
     }
+
+    &:visited {
+        text-decoration: none;
+    }
 }
 
 a:active,
@@ -161,6 +165,7 @@ body {
 .l-main {
     position: relative;
     min-width: 320px;
+    min-height: 100vh;
     z-index: 0;
 }
 
@@ -172,6 +177,7 @@ body {
     margin-right: auto;
     margin-left: auto;
     max-width: 1320px;
+    min-height: calc(100vh - 52px - 42px);
     
     @include screenXS {
         padding-right: 16px;

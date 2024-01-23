@@ -14,14 +14,14 @@ const title = ref('test title');
 //     }
 // });
 
-useHead({
-    // titleTemplate: 'test title',
-    titleTemplate: () => `rrt ${title.value}`,
-    meta: [{ name: 'description', content: 'My amazing site.' }],
-    bodyAttrs: {
-        class: 'test',
-    },
-});
+// useHead({
+//     // titleTemplate: 'test title',
+//     titleTemplate: () => `rrt ${title.value}`,
+//     meta: [{ name: 'description', content: 'My amazing site.' }],
+//     bodyAttrs: {
+//         class: 'test',
+//     },
+// });
 
 
 </script>

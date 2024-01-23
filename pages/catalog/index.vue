@@ -1,11 +1,18 @@
 <script setup>
+const { data: products } = await useFetch('https://fakestoreapi.com/products');
+// console.log(toRaw(products.value));
 
 </script>
 
 <template>
     <h1>Catalog</h1>
-    <button>Открыть</button>
-    <img src="/img/logo.svg" alt="Discover Nuxt 3" />
+    <div class="catalog-cards">
+        <CatalogCard
+            v-for="item in products"
+            :key="item.id"
+            :item="item"
+        />
+    </div>
 </template>
 
 <style lang="scss" scoped>
@@ -17,19 +24,9 @@ h1 {
     font-family: $ff-reg;
 }
 
-button {
-    margin-top: 20px;
-    
-    @include hovers {
-        background-color: $color-black-true;
-        color: $color-white-true;
-        transition: $transition;
-    }
-}
-
-img {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    display: block;
+.catalog-cards {
+    margin: 20px -10px 20px;
+    display: flex;
+    flex-wrap: wrap;
 }
 </style>
