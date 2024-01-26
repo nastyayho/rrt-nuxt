@@ -1,13 +1,16 @@
 <script setup>
 defineProps({
-    item: Array,
+    item: {
+        type: Object,
+        default: null,
+    },
 });
 </script>
 
 <template>
     <div class="card">
         <NuxtLink class="card__inner" :to="`/catalog/${item.id}`">
-            <img class="card__img" :src=item.image alt="Car" />
+            <img class="card__img" :src="item.image" alt="Car">
             <div class="card__title">{{ item.title }}</div>
             <div class="card__description">{{ item.description }}</div>
             <div class="card__price">{{ item.price }} $</div>
@@ -15,10 +18,9 @@ defineProps({
             <button class="card__favorite">like</button>
         </NuxtLink>
     </div>
-
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .card {
     margin-top: 20px;
     padding: 0 10px;

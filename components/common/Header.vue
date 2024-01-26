@@ -32,7 +32,7 @@ onMounted(() => {
     </header>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 header {
     padding: 10px;
     background: $color-green-01;

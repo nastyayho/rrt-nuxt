@@ -15,19 +15,30 @@ if (!product.value) {
 useHead({
     title: product.value.title,
     meta: [{ name: 'description', content: product.value.description }],
-    // bodyAttrs: {
-    //     class: 'car',
-    // },
+    bodyAttrs: {
+        class: 'car',
+    },
 });
+
+useSeoMeta({
+    title: 'My Amazing Site',
+    ogTitle: 'My Amazing Site',
+    description: 'This is my amazing site, let me tell you all about it.',
+    ogDescription: 'This is my amazing site, let me tell you all about it.',
+    ogImage: 'https://example.com/image.png',
+    twitterCard: 'summary_large_image',
+});
+
+
 </script>
 
 <template>
-    <h1>Catalog / Car - {{ id }}</h1>
+    <h1 class="detail__title">Catalog / Car - {{ id }}</h1>
     <div>{{ product.title }}</div>
 </template>
 
-<style lang="scss" scoped>
-h1 {
+<style lang="scss">
+.detail__title {
     margin-top: 20px;
     margin-bottom: 20px;
     font-size: 36px;

@@ -4,7 +4,7 @@
     </footer>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 footer {
     padding: 10px;
     background: $color-blue-02;

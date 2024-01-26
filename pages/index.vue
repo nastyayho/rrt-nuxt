@@ -1,7 +1,16 @@
 <script setup>
+import { useCounterStore } from '~/stores/myStore';
+
 definePageMeta({
-  layout: 'main'
+    layout: 'main',
 });
+
+// test store
+const store = useCounterStore();
+const { name, doubleCount } = store;
+
+const response = await $fetch('/api/hello');
+console.log(response);
 
 useHead({
     // title: 'My title',
@@ -19,39 +28,41 @@ useSeoMeta({
     ogImage: 'https://example.com/image.png',
     twitterCard: 'summary_large_image',
 });
-
 </script>
 
 <template>
-    <h1>INDEX</h1>
-    <button>Открыть</button>
-    <img src="/img/logo.svg" alt="Discover Nuxt 3" />
+    <div class="index">
+        <h1>INDEX</h1>
+        <h2>test pinia {{ name }} {{ doubleCount }}</h2>
+        <button>Открыть</button>
+        <img src="/img/logo.svg" alt="Discover Nuxt 3">
+    </div>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
+.index {
+    h1 {
+        margin-top: 20px;
+        font-size: 36px;
+        line-height: 36px;
+        color: $color-green;
+        font-family: $ff-reg;
+    }
 
-h1 {
-    margin-top: 20px;
-    font-size: 36px;
-    line-height: 36px;
-    color: $color-green;
-    font-family: $ff-reg;
-}
+    button {
+        margin-top: 20px;
 
-button {
-    margin-top: 20px;
-    
-    @include hovers {
-        background-color: $color-black-true;
-        color: $color-white-true;
-        transition: $transition;
+        @include hovers {
+            background-color: $color-black-true;
+            color: $color-white-true;
+            transition: $transition;
+        }
+    }
+
+    img {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        display: block;
     }
 }
-
-img {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    display: block;
-}
-
 </style>
