@@ -1,7 +1,4 @@
 //breakpoints
-@import "variables";
-// @use "variables";
-
 @mixin screenXS {
 	@media screen and (max-width: 575px) {
 		@content;
@@ -78,17 +75,17 @@
     -ms-user-select: none;
 }
 
-// @mixin icomoon-before {
-//     font-family: 'icomoon' !important;
-//     speak: never;
-//     font-style: normal;
-//     font-weight: normal;
-//     font-variant: normal;
-//     text-transform: none;
-//     line-height: 1;
-//     -webkit-font-smoothing: antialiased;
-//     -moz-osx-font-smoothing: grayscale;
-// }
+@mixin icomoon-before {
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
 
 @keyframes spin {
 	0% {

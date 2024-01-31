@@ -20,16 +20,14 @@ useHead({
     },
 });
 
-useSeoMeta({
-    title: 'My Amazing Site',
-    ogTitle: 'My Amazing Site',
-    description: 'This is my amazing site, let me tell you all about it.',
-    ogDescription: 'This is my amazing site, let me tell you all about it.',
-    ogImage: 'https://example.com/image.png',
-    twitterCard: 'summary_large_image',
-});
-
-
+// useSeoMeta({
+//     title: 'My Amazing Site',
+//     ogTitle: 'My Amazing Site',
+//     description: 'This is my amazing site, let me tell you all about it.',
+//     ogDescription: 'This is my amazing site, let me tell you all about it.',
+//     ogImage: 'https://example.com/image.png',
+//     twitterCard: 'summary_large_image',
+// });
 </script>
 
 <template>
@@ -37,7 +35,7 @@ useSeoMeta({
     <div>{{ product.title }}</div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .detail__title {
     margin-top: 20px;
     margin-bottom: 20px;

@@ -1,17 +1,12 @@
 <script setup>
 import { onMounted } from 'vue';
 
-defineProps({
-   
-});
-
-const route = useRoute();
-
 const links = [
     { label: 'Home', to: '/' },
     { label: 'Catalog', to: '/catalog' },
     { label: 'About', to: '/about' },
     { label: 'Car', to: '/catalog/car' },
+    { label: 'UI', to: '/ui' },
 ];
 
 onMounted(() => {
@@ -27,12 +22,14 @@ onMounted(() => {
                 :key="link.label"
                 :to="link.to"
                 exact
-            >{{ link.label }}</NuxtLink>
+            >
+                {{ link.label }}
+            </NuxtLink>
         </nav>
     </header>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 header {
     padding: 10px;
     background: $color-green-01;

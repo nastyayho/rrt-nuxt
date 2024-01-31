@@ -22,6 +22,7 @@ $color-grey-06: #fafafa;
 $color-grey-07: #7a7670;
 $color-grey-08: #666;
 $color-grey-09: #525252;
+$color-grey-10: #cee6cf;
 $color-orange-01: #fd9316;
 $color-orange-02: #f90;
 $color-orange-03: #ff5c00;
@@ -31,7 +32,20 @@ $color-cyan: #19adb7;
 
 // для использования
 // UI Colors
-$c-main-text: $color-grey-01;
+//text
+$c-text-main: $color-grey-01;
+$c-text-white: $color-white-true;
+
+//btn hover -h , active -a
+$c-btn-primary: $color-green; // зеленая
+$c-btn-primary-h: $color-green-03;
+$c-btn-primary-a: $color-green-05;
+$c-btn-dark: $color-grey-02; // серая
+$c-btn-dark-h: $color-grey-08;
+$c-btn-dark-a: $color-grey-09;
+$c-btn-disabled: $color-grey-10; // возможно удаление
+$c-btn-light: $color-white-true;
+$c-btn-light-text-a: $color-grey-02;
 
 // Анимации
 $transition-duration: 0.2s;
@@ -40,18 +54,18 @@ $transition: all $transition-duration $transition-easing 0s;
 $transition-easing-alt: cubic-bezier(0.77, 0, 0.19, 1);
 
 // подключенные
-$Exo2-Light: 'Exo2-Light';
-$Exo2-Regular: 'Exo2-Regular';
-$Exo2-Medium: 'Exo2-Medium';
-$Exo2-SemiBold: 'Exo2-SemiBold';
-$Exo2-Bold: 'Exo2-Bold';
+$Exo2-Light: 'Commissioner-Light';
+$Exo2-Regular: 'Commissioner-Regular';
+$Exo2-Medium: 'Commissioner-Medium';
+$Exo2-SemiBold: 'Commissioner-SemiBold';
+$SegoeUI: 'Segoe UI';
 
 // для использования:
 $ff-ligth: $Exo2-Light, arial, sans-serif;
 $ff-reg: $Exo2-Regular, arial, sans-serif;
 $ff-medium: $Exo2-Medium, arial, sans-serif;
 $ff-semibold: $Exo2-SemiBold, arial, sans-serif;
-$ff-bold: $Exo2-Bold, arial, sans-serif;
+$ff-ruble: $SegoeUI; // рубль
 
 // Breakpoints
 $screenXS: 575px;

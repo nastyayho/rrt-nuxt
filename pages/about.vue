@@ -9,7 +9,7 @@
     </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .about {
     &__title {
         margin-top: 20px;

@@ -73,3 +73,34 @@ bun run preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+Стуктура проекта (в работе)
+
+└── app
+    └── components
+    |   ├── UI
+    |   |   ├── MainButton.vue
+    |   |   ├──
+    |   |    
+    |   ├── Папка 2
+    |   |   ├── Файл 1
+    |   |   |   
+    |   |   └── Файл 2
+    |   |── Папка 3
+    |   |    ├── Файл 1
+    |   |    ├── 
+    |   |    ├── 
+    ├── composables 
+    |   ├── папка/файл
+    |   └──
+    ├── layouts
+    |   ├── default.vue
+    |   ├── main.vue
+    ├── pages
+    |   ├── catalog
+    |   |   ├── [id].vue
+    |   |   └── index.vue
+    ├── public
+    |   ├── img
+    ├── server
+    ├── stores

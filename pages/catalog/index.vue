@@ -1,24 +1,27 @@
 <script setup>
-const { data: products } = await useFetch('https://fakestoreapi.com/products');
+const { data: products } = await useFetch("https://fakestoreapi.com/products");
 // const productsArray = Array.isArray(products) ? products : [products];
 // console.log(productsArray);
 // console.log(toRaw(products.value));
+
+const { buttonText } = "Купить";
 </script>
 
 <template>
     <div class="catalog">
         <h1 class="catalog__title">Catalog</h1>
         <div class="catalog__cards">
-            <CatalogCard 
-                v-for="item in products" 
-                :key="item.id" 
-                :item="item" 
+            <CatalogCard
+                v-for="item in products"
+                :key="item.id"
+                :item="item"
+                :buttonText="buttonText"
             />
         </div>
     </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .catalog {
     &__title {
         margin-top: 20px;

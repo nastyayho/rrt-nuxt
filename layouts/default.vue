@@ -1,8 +1,6 @@
 <script setup>
-import { ref } from 'vue';
-import Header from '@/components/common/Header.vue';
-import Footer from '@/components/common/Footer.vue';
-
+import Header from "@/components/common/Header.vue";
+import Footer from "@/components/common/Footer.vue";
 </script>
 
 <template>
@@ -15,6 +13,4 @@ import Footer from '@/components/common/Footer.vue';
     </main>
 </template>
 
-<style lang="scss">
-
-</style>
+<style lang="scss" scoped></style>

@@ -41,7 +41,7 @@ useHead({
         &__title {
             font-size: 70px;
             line-height: 100%;
-            font-family: $ff-bold;
+            font-family: $ff-semibold;
             color: $color-green;
         }
 

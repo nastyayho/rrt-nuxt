@@ -1,4 +1,6 @@
 <script setup>
+import MainButton from "@/components/UI/MainButton.vue";
+
 defineProps({
     item: {
         type: Object,
@@ -16,16 +18,23 @@ defineProps({
             <div class="card__price">{{ item.price }} $</div>
             <div class="card__rating">{{ item.rating.rate }}</div>
             <button class="card__favorite">like</button>
+            <div class="card__btn">
+                <MainButton 
+                    customClass="btn_default"
+                    buttonText="Купить"
+                    iconClass="icon-heart-linear"
+                />
+            </div>
         </NuxtLink>
     </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .card {
     margin-top: 20px;
     padding: 0 10px;
     width: 25%;
-    
+
     &__inner {
         display: block;
         padding: 10px;
@@ -50,20 +59,20 @@ defineProps({
     &__title {
         margin-top: 10px;
         font-size: 18px;
-        font-family: $ff-bold;
-    } 
+        font-family: $ff-semibold;
+    }
 
     &__description {
         margin-top: 10px;
         font-size: 14px;
         color: $color-grey-08;
-    } 
+    }
 
     &__price {
         margin-top: 12px;
         font-size: 24px;
-        font-family: $ff-bold;
-    } 
+        font-family: $ff-semibold;
+    }
 
     &__rating {
         position: absolute;
@@ -79,10 +88,15 @@ defineProps({
         display: flex;
         justify-content: center;
         align-items: center;
-    } 
+    }
 
     &__favorite {
         margin-top: 10px;
+    }
+
+    &__btn {
+        margin-top: 10px;
+        display: block;
     }
 }
 </style>
